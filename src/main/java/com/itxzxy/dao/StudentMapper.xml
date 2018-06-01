@@ -3,9 +3,29 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itxzxy.dao.StudentMapper">
+    <!-- resultMap 数据结果集映射map，主要作用就是将数据库中的字段跟需要映射的model的属性一一对应，
+    这样即使model中的属性跟数据库中的字段不一样，也能映射成功
+    id  这个resultMap的唯一表示，
+    type 需要映射的model信息-->
+    <resultMap id="BaseResultMap" type="com.itxzxy.pojo.Student" >
+        <!-- column:库表的字段名 property:实体类里的属性名 -->
+        <id column="stuid" property="id" />
+        <result column="name" property="name" />
+        <result column="QQ" property="qq" />
+        <result column="type" property="type" />
+        <result column="admission_time" property="admissionTime" />
+        <result column="school" property="school" />
+        <result column="num" property="num" />
+        <result column="daily" property="daily" />
+        <result column="declaration" property="declaration" />
+        <result column="elder" property="elder" />
+        <result column="knew_from" property="knewFrom" />
+        <result column="create_at" property="createAt" />
+        <result column="update_at" property="updateAt" />
+    </resultMap>
 
-    <select id="findById" parameterType="long" resultType="com.itxzxy.pojo.Student">
-        SELECT * FROM students WHERE id = #{id}
+    <select id="findById" parameterType="long" resultMap="BaseResultMap">
+        SELECT * FROM students WHERE stuid = #{id}
     </select>
 
     <select id="findByName" parameterType="java.lang.String" resultType="com.itxzxy.pojo.Student">
@@ -25,7 +45,7 @@
     </insert>
 
     <delete id="deleteStudent" parameterType="java.lang.Long">
-        DELETE FROM students WHERE id = #{id}
+        DELETE FROM students WHERE stuid = #{id}
     </delete>
 
     <update id="updateStudent" parameterType="com.itxzxy.pojo.Student">
@@ -48,7 +68,7 @@
         </set>
 
         <where><!--where标签会去除第一个条件的and和or-->
-            <if test="id!=null">AND id=#{id}</if>
+            <if test="id!=null">AND stuid=#{id}</if>
         </where>
     </update>
 

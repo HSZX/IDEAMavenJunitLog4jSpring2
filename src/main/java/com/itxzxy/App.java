@@ -18,13 +18,13 @@ public class App {
 
         Student studentInsert = new Student(
                 "李弘基", "908163862", "JAVA工程师",
-                "20180808", "清华大学", "java-",
+                "20180808", "清华大学", "java-3",
                 "http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3",
                 "仙风道骨，high到入土！", "成都分院王尼玛", "知乎");
         //插入数据，可以加个循环插入n条数据
         // 插入数据时候num必须互不相同，因为设计的表格num建立了唯一索引
         // 记录debug级别的信息
-
+/*
         try {
 
             service.addAStudent(studentInsert);
@@ -32,8 +32,6 @@ public class App {
         } catch (Exception e) {
             logger.error("->插入信息时发生错误！");
         }
-
-/*
 
         //删除
 
@@ -61,6 +59,7 @@ public class App {
         } catch (Exception e) {
             logger.error("->查询的时候发生错误！");
         }
+        */
 
         //主键查询
         try {
@@ -74,7 +73,7 @@ public class App {
         } catch (Exception e) {
             logger.info("->查询的时候发生错误！");
         }
-
+/*
         //逐条更新
         long startUpdate = System.currentTimeMillis();
         Student studentUpdate = studentInsert;
