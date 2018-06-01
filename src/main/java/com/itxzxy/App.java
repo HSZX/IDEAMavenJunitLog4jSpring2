@@ -35,7 +35,7 @@ public class App {
         } catch (Exception e) {
             logger.error("->插入信息时发生错误！");
         }
-
+*/
         //删除
 
         try {
@@ -48,7 +48,7 @@ public class App {
         } catch (Exception e) {
             logger.error("->删除信息时发生错误！");
         }
-
+/*
         //使用学号精确查询
         try {
             String selectNum = "java-5";

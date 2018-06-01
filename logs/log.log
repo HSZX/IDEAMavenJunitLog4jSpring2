@@ -522,3 +522,33 @@ com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WH
 2018-06-01 13:51:53  [ main:0 ] - [ INFO ]  {dataSource-1} inited
 2018-06-01 13:51:53  [ main:563 ] - [ INFO ]  ->完成更新！一共花费时间： 610毫秒。
 2018-06-01 13:52:37  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:56:55  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:57:11  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:58:52  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:58:52  [ main:422 ] - [ INFO ]  ->成功找到线上学号为“java-5”的学员：
+姓名：乖儿子
+QQ：3169119846
+修真类型：JAVA工程师
+预计入学时间：11月18日--11月22日
+毕业院校：燕山大学
+线上学号：java-5
+日报链接：http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3
+立愿：仙风道骨
+辅导师兄：郑州分院王鹏举
+从何处了解：知乎
+2018-06-01 13:58:52  [ main:422 ] - [ INFO ]  ->成功找到ID为“3”的学员：
+姓名：乖儿子
+QQ：3169119846
+修真类型：JAVA工程师
+预计入学时间：11月18日--11月22日
+毕业院校：燕山大学
+线上学号：java-3
+日报链接：http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3
+立愿：仙风道骨
+辅导师兄：郑州分院王鹏举
+从何处了解：知乎
+2018-06-01 13:58:52  [ main:516 ] - [ INFO ]  ->完成更新！一共花费时间： 94毫秒。
+2018-06-01 14:00:52  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 14:00:52  [ main:454 ] - [ INFO ]  ->成功删除一条学员信息，该学员的ID是1
+2018-06-01 14:00:52  [ main:469 ] - [ INFO ]  ->ID为1的学员信息更新错误！
+2018-06-01 14:00:52  [ main:594 ] - [ INFO ]  ->完成更新！一共花费时间： 140毫秒。

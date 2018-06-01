@@ -46,7 +46,7 @@ public class AppTest
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-        List<Student> students = studentMapper.findByName("李");
+        List<Student> students = studentMapper.findByName("王");
         System.out.println(students);
     }
 
