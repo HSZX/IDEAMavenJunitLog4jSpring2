@@ -1,9 +1,12 @@
 package com.itxzxy;
 
+import com.itxzxy.dao.StudentMapper;
 import com.itxzxy.pojo.Student;
 import com.itxzxy.service.CrudService;
 import com.itxzxy.service.CrudServiceImpl;
 import org.apache.log4j.Logger;
+
+import java.util.List;
 
 /**
  * Hello world!
@@ -59,11 +62,11 @@ public class App {
         } catch (Exception e) {
             logger.error("->查询的时候发生错误！");
         }
-        */
+
 
         //主键查询
         try {
-            Long selectID = 1L;
+            Long selectID = 3L;
             Student studentByID;
             studentByID = service.findByPrimeKey(selectID);
             if (studentByID != null)
@@ -73,28 +76,28 @@ public class App {
         } catch (Exception e) {
             logger.info("->查询的时候发生错误！");
         }
-/*
+*/
         //逐条更新
         long startUpdate = System.currentTimeMillis();
-        Student studentUpdate = studentInsert;
-        studentUpdate.setDeclaration("老大最帅");
-        //不更新Num属性
-        studentUpdate.setNum(null);
-        for (long i = 1; i < 10; i++) {
-            studentUpdate.setId(i);
+
+        for (long i = 1; i < 11; i++) {
+            long selectID = i;
+            Student student_update = null;//根据id取出原记录
             try {
-                if (service.updateInformation(studentUpdate)) {
+                student_update = service.findByPrimeKey(selectID);
+                student_update.setDeclaration("仙风道骨");//准备新数据
+                if (service.updateInformation(student_update)) {
                     logger.debug("->ID为" + i + "的学员信息更新成功！");
                 } else {
                     logger.info("->ID为" + i + "的学员信息更新失败！");
-                }
+                }//将新记录送去数据库替换原记录
             } catch (Exception e) {
-                logger.error("->更新的时候发生异常！");
+                logger.info("->ID为" + i + "的学员信息更新错误！");
             }
         }
         long endUpdate = System.currentTimeMillis();
         logger.info("->完成更新！一共花费时间： " + (endUpdate - startUpdate) + "毫秒。");
-
+/*
         //清空表格，为下次测试做准备
         try {
             service.deleteAll();

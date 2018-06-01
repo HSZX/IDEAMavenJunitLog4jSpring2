@@ -129,3 +129,396 @@ com.alibaba.druid.sql.parser.ParserException: syntax error
 2018-06-01 12:14:00  [ main:469 ] - [ INFO ]  The total time spent on updating is 516millisecond.
 2018-06-01 12:14:58  [ main:0 ] - [ INFO ]  {dataSource-1} inited
 2018-06-01 12:14:58  [ main:406 ] - [ INFO ]  The total time spent on updating is 500millisecond.
+2018-06-01 12:30:12  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:30:37  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:30:37  [ main:407 ] - [ INFO ]  ->查询失败，ID为1的学员不存在！
+2018-06-01 12:30:58  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:30:58  [ main:407 ] - [ INFO ]  ->成功找到ID为“3”的学员：
+姓名：儿子
+QQ：3169119846
+修真类型：JAVA工程师
+预计入学时间：20180531
+毕业院校：清华大学
+线上学号：java-10
+日报链接：http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3
+立愿：仙风道骨，high到入土
+辅导师兄：马云
+从何处了解：知乎
+2018-06-01 12:32:05  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:32:06  [ main:438 ] - [ INFO ]  ->成功找到ID为“3”的学员：
+姓名：儿子
+QQ：3169119846
+修真类型：JAVA工程师
+预计入学时间：20180531
+毕业院校：清华大学
+线上学号：java-10
+日报链接：http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3
+立愿：仙风道骨，high到入土
+辅导师兄：马云
+从何处了解：知乎
+2018-06-01 12:32:06  [ main:563 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:626 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:657 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:688 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:704 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:719 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:751 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:766 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:782 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 12:32:06  [ main:782 ] - [ INFO ]  ->完成更新！一共花费时间： 344毫秒。
+2018-06-01 12:32:53  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:33:12  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:33:20  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:33:23  [ main:3484 ] - [ INFO ]  The total time spent on updating is 3515millisecond.
+2018-06-01 12:33:40  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:33:58  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:34:30  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 12:34:30  [ main:425 ] - [ INFO ]  The total time spent on updating is 503millisecond.
+2018-06-01 13:09:47  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:10:09  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:10:10  [ main:484 ] - [ INFO ]  The total time spent on updating is 531millisecond.
+2018-06-01 13:10:47  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:10:54  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:10:55  [ main:505 ] - [ INFO ]  The total time spent on updating is 552millisecond.
+2018-06-01 13:22:30  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:22:30  [ main:375 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:500 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:515 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:515 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:547 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:547 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:562 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:562 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:578 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:578 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:593 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:593 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:609 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:609 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:625 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:640 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:656 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:656 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:672 ] - [ ERROR ]  merge sql error, dbType mysql, sql : 
+UPDATE students SET declaration WHERE id=?
+com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WHERE WHERE
+	at com.alibaba.druid.sql.parser.SQLExprParser.accept(SQLExprParser.java:1590)
+	at com.alibaba.druid.sql.parser.SQLExprParser.parseUpdateSetItem(SQLExprParser.java:1105)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateSet(MySqlStatementParser.java:2929)
+	at com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser.parseUpdateStatement(MySqlStatementParser.java:252)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:185)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:145)
+	at com.alibaba.druid.sql.parser.SQLStatementParser.parseStatementList(SQLStatementParser.java:140)
+	at com.alibaba.druid.sql.visitor.ParameterizedOutputVisitorUtils.parameterize(ParameterizedOutputVisitorUtils.java:53)
+	at com.alibaba.druid.filter.stat.StatFilter.mergeSql(StatFilter.java:145)
+	at com.alibaba.druid.filter.stat.StatFilter.createSqlStat(StatFilter.java:630)
+	at com.alibaba.druid.filter.stat.StatFilter.statementPrepareAfter(StatFilter.java:305)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_prepareStatement(FilterEventAdapter.java:124)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_prepareStatement(FilterChainImpl.java:448)
+	at com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl.prepareStatement(ConnectionProxyImpl.java:342)
+	at com.alibaba.druid.pool.DruidPooledConnection.prepareStatement(DruidPooledConnection.java:331)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.instantiateStatement(PreparedStatementHandler.java:79)
+	at org.apache.ibatis.executor.statement.BaseStatementHandler.prepare(BaseStatementHandler.java:88)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.prepare(RoutingStatementHandler.java:58)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:76)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:115)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:75)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:170)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:55)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy2.updateStudent(Unknown Source)
+	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
+	at com.itxzxy.App.main(App.java:86)
+2018-06-01 13:22:31  [ main:672 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-01 13:22:31  [ main:672 ] - [ INFO ]  ->完成更新！一共花费时间： 719毫秒。
+2018-06-01 13:24:04  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:24:05  [ main:751 ] - [ INFO ]  ->完成更新！一共花费时间： 797毫秒。
+2018-06-01 13:32:26  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:32:26  [ main:454 ] - [ INFO ]  The total time spent on updating is 500millisecond.
+2018-06-01 13:32:46  [ main:16 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:32:46  [ main:594 ] - [ INFO ]  ->完成更新！一共花费时间： 641毫秒。
+2018-06-01 13:46:00  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:46:00  [ main:609 ] - [ INFO ]  ->完成更新！一共花费时间： 672毫秒。
+2018-06-01 13:47:04  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:47:05  [ main:566 ] - [ INFO ]  ->完成更新！一共花费时间： 628毫秒。
+2018-06-01 13:47:31  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:47:45  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:47:46  [ main:453 ] - [ INFO ]  The total time spent on updating is 484millisecond.
+2018-06-01 13:51:13  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:51:24  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:51:38  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:51:39  [ main:484 ] - [ INFO ]  The total time spent on updating is 516millisecond.
+2018-06-01 13:51:53  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-01 13:51:53  [ main:563 ] - [ INFO ]  ->完成更新！一共花费时间： 610毫秒。
+2018-06-01 13:52:37  [ main:0 ] - [ INFO ]  {dataSource-1} inited

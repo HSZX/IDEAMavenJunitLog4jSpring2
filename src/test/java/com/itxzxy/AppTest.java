@@ -90,7 +90,7 @@ public class AppTest
                 "http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3",
                 "努力努力再努力！", "郑州分院王鹏举", "知乎");
         student_insert.setCreateAt(System.currentTimeMillis());
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 1; i < 11; i++) {
             student_insert.setNum("java-" + i);
             logger.debug(studentMapper.insertStudent(student_insert) + "  :  " + student_insert.getId());
         }
