@@ -1,1 +1,9 @@
 2018-06-02 10:18:48  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-02 11:50:53  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-02 12:09:54  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-02 12:10:25  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16f6598: startup date [Sat Jun 02 12:10:25 CST 2018]; root of context hierarchy
+2018-06-02 12:10:25  [ main:94 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-02 12:10:25  [ main:627 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 's' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'qq' of bean class [com.itxzxy.pojo.Student]: Bean property 'qq' is not writable or has an invalid setter method. Did you mean 'QQ', or 'id'?
+2018-06-02 12:15:54  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16f6598: startup date [Sat Jun 02 12:15:54 CST 2018]; root of context hierarchy
+2018-06-02 12:15:54  [ main:62 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-02 12:15:54  [ main:422 ] - [ INFO ]  {dataSource-1} inited

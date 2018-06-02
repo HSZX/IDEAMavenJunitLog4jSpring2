@@ -5,6 +5,8 @@ import com.itxzxy.pojo.Student;
 import com.itxzxy.service.CrudService;
 import com.itxzxy.service.CrudServiceImpl;
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
 
@@ -19,15 +21,17 @@ public class App {
 
         CrudService service = new CrudServiceImpl();
 
-        Student studentInsert = new Student(
+        /*Student studentInsert = new Student(
                 "李弘基", "908163862", "JAVA工程师",
                 "20180808", "清华大学", "java-3",
                 "http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3",
                 "仙风道骨，high到入土！", "成都分院王尼玛", "知乎");
+                */
         //插入数据，可以加个循环插入n条数据
         // 插入数据时候num必须互不相同，因为设计的表格num建立了唯一索引
         // 记录debug级别的信息
-/*
+        ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "applicationContext.xml" });
+        Student studentInsert=(Student) context.getBean("s");
         try {
 
             service.addAStudent(studentInsert);
@@ -35,7 +39,7 @@ public class App {
         } catch (Exception e) {
             logger.error("->插入信息时发生错误！");
         }
-*/
+/*
         //删除
 
         try {
@@ -48,7 +52,7 @@ public class App {
         } catch (Exception e) {
             logger.error("->删除信息时发生错误！");
         }
-/*
+
         //使用学号精确查询
         try {
             String selectNum = "java-5";
@@ -76,7 +80,7 @@ public class App {
         } catch (Exception e) {
             logger.info("->查询的时候发生错误！");
         }
-*/
+
         //逐条更新
         long startUpdate = System.currentTimeMillis();
 
@@ -97,7 +101,7 @@ public class App {
         }
         long endUpdate = System.currentTimeMillis();
         logger.info("->完成更新！一共花费时间： " + (endUpdate - startUpdate) + "毫秒。");
-/*
+
         //清空表格，为下次测试做准备
         try {
             service.deleteAll();
