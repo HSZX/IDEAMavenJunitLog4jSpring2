@@ -85,7 +85,7 @@ public class App {
             Student student_update = null;//根据id取出原记录
             try {
                 student_update = service.findByPrimeKey(selectID);
-                student_update.setDeclaration("仙风道骨");//准备新数据
+                student_update.setDeclaration("HIGH到入土");//准备新数据
                 if (service.updateInformation(student_update)) {
                     logger.debug("->ID为" + i + "的学员信息更新成功！");
                 } else {

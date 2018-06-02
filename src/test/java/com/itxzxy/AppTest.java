@@ -22,6 +22,7 @@ public class AppTest
 {
     private SqlSessionFactory sqlSessionFactory;
 
+
     @Before //创建会话工厂sqlSessionFactory
     public void setUp() throws Exception {
         String resource = "mybatis-config.xml"; //mybatis配置文件
@@ -140,7 +141,7 @@ public class AppTest
         logger.info("The total time spent on updating is " + (end - start) + "millisecond.");
     }
 
-    @Test
+ @Test
     public void truncateTableTest() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
