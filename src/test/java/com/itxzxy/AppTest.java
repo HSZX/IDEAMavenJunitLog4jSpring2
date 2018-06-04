@@ -68,11 +68,13 @@ public class AppTest
         //创建UserMapper对象，mybatis自动生成mapper代理对象
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         Logger logger = Logger.getLogger(AppTest.class);
-        Student student_insert = new Student(
+        ApplicationContext atc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Student student_insert = (Student) atc.getBean("s");
+        /*Student student_insert = new Student(
                 "儿子", "3169119846", "JAVA工程师",
                 "20180531", "清华大学", "java-10",
                 "http://www.jnshu.com/daily/40038?dailyType=others&total=8&page=1&uid=18143&sort=0&orderBy=3",
-                "仙风道骨，high到入土", "马云", "知乎");
+                "仙风道骨，high到入土", "马云", "知乎");*/
 
         student_insert.setCreateAt(System.currentTimeMillis());
         logger.debug(studentMapper.insertStudent(student_insert) + "  :  " + student_insert.getId());

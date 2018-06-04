@@ -26,6 +26,7 @@
         <property name="elder" value="儿子" />
         <property name="knewFrom" value="百度" />
     </bean>
+
     <!-- 配置数据源 -->
     <context:property-placeholder location="classpath:db.properties"/>
 
@@ -60,14 +61,20 @@
         <!-- <property name="filters" value="stat" /> -->
         <property name="filters" value="mergeStat"/>
     </bean>
+
     <!-- myBatis文件,配置会话工厂 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 加载mybatis配置文件 -->
         <property name="configLocation" value="classpath:mybatis-config.xml"/>
         <!--配置连接数据库数据源（必不可缺）-->
         <property name="dataSource" ref="dataSource"/>
+        <!--对应实体类的包名,实体类Student-->
+        <property name="typeAliasesPackage" value="com.itxzxy.pojo"/>
+        <!--告诉xml文件的路径去加载-->
+        <property name="mapperLocations" value="classpath*:com/itxzxy/**/*Mapper.xml"></property>
     </bean>
-    <!-- 配置我们需要交给spring来new类 -->
+
+    <!-- 指出我们需要交给spring来new的类，本项目是StudentMapper -->
     <bean id="studentMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
         <property name="mapperInterface" value="com.itxzxy.dao.StudentMapper"></property>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
