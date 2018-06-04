@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-
+//工厂类
 public class CrudServiceImpl implements CrudService {
     private static   SqlSessionFactory sqlSessionFactory;
 

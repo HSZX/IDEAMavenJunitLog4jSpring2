@@ -1,0 +1,106 @@
+Index: .idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml	(revision )
++++ .idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml	(revision )
+@@ -0,0 +1,13 @@
++<component name="libraryTable">
++  <library name="Maven: org.mybatis:mybatis-spring:1.3.0">
++    <CLASSES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0.jar!/" />
++    </CLASSES>
++    <JAVADOC>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-javadoc.jar!/" />
++    </JAVADOC>
++    <SOURCES>
++      <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-sources.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: logs/log.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- logs/log.log	(date 1527913130000)
++++ logs/log.log	(revision )
+@@ -1,9 +1,3 @@
+-2018-06-02 10:18:48  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+-2018-06-02 11:50:53  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+-2018-06-02 12:09:54  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+-2018-06-02 12:10:25  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16f6598: startup date [Sat Jun 02 12:10:25 CST 2018]; root of context hierarchy
+-2018-06-02 12:10:25  [ main:94 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+-2018-06-02 12:10:25  [ main:627 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 's' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'qq' of bean class [com.itxzxy.pojo.Student]: Bean property 'qq' is not writable or has an invalid setter method. Did you mean 'QQ', or 'id'?
+-2018-06-02 12:15:54  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16f6598: startup date [Sat Jun 02 12:15:54 CST 2018]; root of context hierarchy
+-2018-06-02 12:15:54  [ main:62 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+-2018-06-02 12:15:54  [ main:422 ] - [ INFO ]  {dataSource-1} inited
++2018-06-04 10:38:17  [ main:0 ] - [ INFO ]  {dataSource-1} inited
++2018-06-04 10:38:38  [ main:0 ] - [ INFO ]  {dataSource-1} inited
++2018-06-04 10:38:38  [ main:599 ] - [ INFO ]  The total time spent on updating is 655millisecond.
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- pom.xml	(date 1527913130000)
++++ pom.xml	(revision )
+@@ -97,6 +97,12 @@
+       <artifactId>spring-aspects</artifactId>
+       <version>4.1.3.RELEASE</version>
+     </dependency>
++    <!--mybatis-spring整合包-->
++    <dependency>
++      <groupId>org.mybatis</groupId>
++      <artifactId>mybatis-spring</artifactId>
++      <version>1.3.0</version>
++    </dependency>
+   </dependencies>
+ 
+   <build>
+Index: IdeaMavenJunitLog4j.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- IdeaMavenJunitLog4j.iml	(date 1527913130000)
++++ IdeaMavenJunitLog4j.iml	(revision )
+@@ -2,7 +2,11 @@
+ <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="Spring" name="Spring">
+-      <configuration />
++      <configuration>
++        <fileset id="fileset" name="Spring Application Context" removed="false">
++          <file>file://$MODULE_DIR$/src/main/resources/applicationContext.xml</file>
++        </fileset>
++      </configuration>
+     </facet>
+   </component>
+   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+@@ -51,5 +55,6 @@
+     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" level="project" />
+     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.1.3.RELEASE" level="project" />
+     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.4" level="project" />
++    <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.3.0" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: src/main/java/com/itxzxy/service/CrudServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/itxzxy/service/CrudServiceImpl.java	(date 1527913130000)
++++ src/main/java/com/itxzxy/service/CrudServiceImpl.java	(revision )
+@@ -12,7 +12,7 @@
+ import java.io.InputStream;
+ import java.util.List;
+ 
+-
++//工厂类
+ public class CrudServiceImpl implements CrudService {
+     private static   SqlSessionFactory sqlSessionFactory;
+ 

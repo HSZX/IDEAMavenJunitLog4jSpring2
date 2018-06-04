@@ -11,6 +11,14 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.InputStream;
 import java.util.List;
@@ -18,53 +26,47 @@ import java.util.List;
 /**
  * Unit test for simple App.
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+
+@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+
 public class AppTest 
 {
-    private SqlSessionFactory sqlSessionFactory;
-
-
-    @Before //创建会话工厂sqlSessionFactory
-    public void setUp() throws Exception {
-        String resource = "mybatis-config.xml"; //mybatis配置文件
-        //得到配置文件的流
-        InputStream inputStream = Resources.getResourceAsStream(resource);
-        //创建会话工厂SqlSessionFactory,把mybaits的配置文件的流传入会话工厂
-        sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-    }
-
+    @Autowired
+    private StudentMapper studentMapper;
 
     @Test
     public void findByIdTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+       /* ApplicationContext atc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        StudentMapper studentMapper = (StudentMapper) atc.getBean("studentMapper");*/
         Student student = studentMapper.findById(1L);
         System.out.println(student);
     }
 
     @Test
     public void findByNameTest() throws Exception {
+        /*
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         List<Student> students = studentMapper.findByName("王");
         System.out.println(students);
     }
 
     @Test
     public void findByNumTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         Student student = studentMapper.findByNum("java-5000");
         System.out.println(student);
     }
 
     @Test
     public void insertSingleTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         Logger logger = Logger.getLogger(AppTest.class);
         Student student_insert = new Student(
                 "儿子", "3169119846", "JAVA工程师",
@@ -74,15 +76,14 @@ public class AppTest
 
         student_insert.setCreateAt(System.currentTimeMillis());
         logger.debug(studentMapper.insertStudent(student_insert) + "  :  " + student_insert.getId());
-        sqlSession.commit();
-        sqlSession.close();
+
     }
 
     @Test
     public void insertStudentTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+       /* SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         Logger logger = Logger.getLogger(App.class);
         long start_insert = System.currentTimeMillis();
         Student student_insert = new Student(
@@ -97,23 +98,22 @@ public class AppTest
         }
         long end_insert = System.currentTimeMillis();
         logger.info("The total time spent on updating is " + (end_insert - start_insert) + "millisecond.");
-        sqlSession.commit();
-        sqlSession.close();
+
     }
 
     @Test
     public void deleteStudentTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         System.out.println(studentMapper.deleteStudent(1L));
     }
 
     @Test
     public void updateStudentTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         Logger logger = Logger.getLogger(AppTest.class);
         long start_update = System.currentTimeMillis();
         Student student_update = studentMapper.findById(3L);//取出原记录
@@ -128,9 +128,9 @@ public class AppTest
 
     @Test
     public void updateAllTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         Logger logger = Logger.getLogger(AppTest.class);
         long start = System.currentTimeMillis();
         Student student = new Student();
@@ -143,11 +143,11 @@ public class AppTest
 
  @Test
     public void truncateTableTest() throws Exception {
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        /*SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
+        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
         studentMapper.truncateTable();
-        sqlSession.close();
+
     }
 
 }

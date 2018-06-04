@@ -1,9 +1,65 @@
-2018-06-02 10:18:48  [ main:0 ] - [ INFO ]  {dataSource-1} inited
-2018-06-02 11:50:53  [ main:0 ] - [ INFO ]  {dataSource-1} inited
-2018-06-02 12:09:54  [ main:0 ] - [ INFO ]  {dataSource-1} inited
-2018-06-02 12:10:25  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16f6598: startup date [Sat Jun 02 12:10:25 CST 2018]; root of context hierarchy
-2018-06-02 12:10:25  [ main:94 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
-2018-06-02 12:10:25  [ main:627 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 's' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'qq' of bean class [com.itxzxy.pojo.Student]: Bean property 'qq' is not writable or has an invalid setter method. Did you mean 'QQ', or 'id'?
-2018-06-02 12:15:54  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@16f6598: startup date [Sat Jun 02 12:15:54 CST 2018]; root of context hierarchy
-2018-06-02 12:15:54  [ main:62 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
-2018-06-02 12:15:54  [ main:422 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 10:38:17  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 10:38:38  [ main:0 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 10:38:38  [ main:599 ] - [ INFO ]  The total time spent on updating is 655millisecond.
+2018-06-04 11:36:11  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@11aa95a: startup date [Mon Jun 04 11:36:11 CST 2018]; root of context hierarchy
+2018-06-04 11:36:11  [ main:95 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 11:36:12  [ main:867 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 11:36:13  [ main:1772 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 11:39:50  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@11aa95a: startup date [Mon Jun 04 11:39:50 CST 2018]; root of context hierarchy
+2018-06-04 11:39:50  [ main:79 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 11:39:50  [ main:369 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 11:39:50  [ main:669 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 11:42:54  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@cbc42f: startup date [Mon Jun 04 11:42:54 CST 2018]; root of context hierarchy
+2018-06-04 11:42:54  [ main:91 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 11:42:54  [ main:376 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 11:42:54  [ main:648 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 11:59:54  [ main:0 ] - [ INFO ]  Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@cbc42f: startup date [Mon Jun 04 11:59:54 CST 2018]; root of context hierarchy
+2018-06-04 11:59:54  [ main:119 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 11:59:55  [ main:964 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 11:59:55  [ main:1810 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 12:08:20  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-04 12:08:20  [ main:33 ] - [ INFO ]  Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-06-04 12:08:20  [ main:35 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16a51ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1081592, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a81e8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1629756, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ee68d8]
+2018-06-04 12:08:20  [ main:343 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 12:08:20  [ main:676 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:08:20 CST 2018]; root of context hierarchy
+2018-06-04 12:08:21  [ main:920 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 12:08:21  [ main:1236 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 12:08:22  [ Thread-1:2046 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:08:20 CST 2018]; root of context hierarchy
+2018-06-04 12:08:22  [ Thread-1:2052 ] - [ INFO ]  {dataSource-1} closed
+2018-06-04 12:11:07  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-04 12:11:07  [ main:39 ] - [ INFO ]  Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-06-04 12:11:07  [ main:40 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16a51ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1081592, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a81e8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1629756, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ee68d8]
+2018-06-04 12:11:07  [ main:302 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 12:11:07  [ main:691 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:11:07 CST 2018]; root of context hierarchy
+2018-06-04 12:11:08  [ main:972 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 12:11:08  [ main:1401 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 12:11:09  [ Thread-1:2904 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:11:07 CST 2018]; root of context hierarchy
+2018-06-04 12:11:09  [ Thread-1:2909 ] - [ INFO ]  {dataSource-1} closed
+2018-06-04 12:12:04  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-04 12:12:04  [ main:23 ] - [ INFO ]  Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-06-04 12:12:04  [ main:25 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16a51ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1081592, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a81e8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1629756, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ee68d8]
+2018-06-04 12:12:04  [ main:183 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 12:12:05  [ main:409 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:12:05 CST 2018]; root of context hierarchy
+2018-06-04 12:12:05  [ main:559 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 12:12:05  [ main:823 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 12:12:06  [ Thread-1:1928 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:12:05 CST 2018]; root of context hierarchy
+2018-06-04 12:12:06  [ Thread-1:1934 ] - [ INFO ]  {dataSource-1} closed
+2018-06-04 12:13:49  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-04 12:13:49  [ main:24 ] - [ INFO ]  Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-06-04 12:13:49  [ main:25 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16a51ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1081592, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a81e8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1629756, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ee68d8]
+2018-06-04 12:13:49  [ main:170 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 12:13:49  [ main:374 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:13:49 CST 2018]; root of context hierarchy
+2018-06-04 12:13:49  [ main:554 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 12:13:50  [ main:823 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 12:13:50  [ Thread-1:1579 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:13:49 CST 2018]; root of context hierarchy
+2018-06-04 12:13:50  [ Thread-1:1588 ] - [ INFO ]  {dataSource-1} closed
+2018-06-04 12:13:59  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2018-06-04 12:13:59  [ main:24 ] - [ INFO ]  Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2018-06-04 12:13:59  [ main:25 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@16a51ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1081592, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a81e8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1629756, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ee68d8]
+2018-06-04 12:13:59  [ main:176 ] - [ INFO ]  Loading XML bean definitions from class path resource [applicationContext.xml]
+2018-06-04 12:13:59  [ main:386 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:13:59 CST 2018]; root of context hierarchy
+2018-06-04 12:14:00  [ main:605 ] - [ INFO ]  Loading properties file from class path resource [db.properties]
+2018-06-04 12:14:00  [ main:940 ] - [ INFO ]  {dataSource-1} inited
+2018-06-04 12:14:01  [ main:1603 ] - [ INFO ]  The total time spent on updating is 366millisecond.
+2018-06-04 12:14:01  [ Thread-1:1605 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@f777e8: startup date [Mon Jun 04 12:13:59 CST 2018]; root of context hierarchy
+2018-06-04 12:14:01  [ Thread-1:1609 ] - [ INFO ]  {dataSource-1} closed
