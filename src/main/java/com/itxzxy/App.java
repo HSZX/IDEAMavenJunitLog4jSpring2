@@ -19,7 +19,7 @@ public class App {
     public static void main(String[] args) {
         Logger logger = Logger.getLogger(App.class);
 
-        CrudService service = new CrudServiceImpl();
+       CrudService service = new CrudServiceImpl();
 
         /*Student studentInsert = new Student(
                 "李弘基", "908163862", "JAVA工程师",
@@ -30,15 +30,17 @@ public class App {
         //插入数据，可以加个循环插入n条数据
         // 插入数据时候num必须互不相同，因为设计的表格num建立了唯一索引
         // 记录debug级别的信息
-        ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "applicationContext.xml" });
-        Student studentInsert=(Student) context.getBean("s");
-        try {
 
-            service.addAStudent(studentInsert);
+        ApplicationContext atc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        /*StudentMapper studentMapper=(StudentMapper) atc.getBean("studentMapper");*/
+        Student student_insert = (Student) atc.getBean("s");
+        try {
+            service.addAStudent(student_insert);
             logger.debug("->成功插入一条信息");
         } catch (Exception e) {
             logger.error("->插入信息时发生错误！");
         }
+
 /*
         //删除
 

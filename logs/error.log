@@ -379,3 +379,11 @@ com.alibaba.druid.sql.parser.ParserException: syntax error, expect EQ, actual WH
 	at com.itxzxy.service.CrudServiceImpl.updateInformation(CrudServiceImpl.java:90)
 	at com.itxzxy.App.main(App.java:86)
 2018-06-01 13:22:31  [ main:672 ] - [ ERROR ]  ->更新的时候发生异常！
+2018-06-05 12:25:34  [ main:1265 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:26:28  [ main:1281 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:26:47  [ main:984 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:40:57  [ main:953 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:44:46  [ main:1136 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:45:36  [ main:969 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:56:41  [ main:954 ] - [ ERROR ]  ->插入信息时发生错误！
+2018-06-05 12:58:44  [ main:1016 ] - [ ERROR ]  ->插入信息时发生错误！
