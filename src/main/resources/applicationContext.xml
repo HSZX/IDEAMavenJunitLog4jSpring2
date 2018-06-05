@@ -27,11 +27,10 @@
         <property name="knewFrom" value="百度" />
     </bean>
 
-    <!-- 配置数据源 -->
+    <!-- 配置数据源 ,/src/main/resources/db.properties文件就会被spring加载-->
     <context:property-placeholder location="classpath:db.properties"/>
 
-    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
-          init-method="init" destroy-method="close">
+    <bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
         <property name="url" value="${jdbc_url}"/>
         <property name="username" value="${jdbc_username}"/>
         <property name="password" value="${jdbc_password}"/>

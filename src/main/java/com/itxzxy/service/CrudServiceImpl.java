@@ -3,15 +3,13 @@ package com.itxzxy.service;
 
 import com.itxzxy.dao.StudentMapper;
 import com.itxzxy.pojo.Student;
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 //工厂类
@@ -29,7 +27,9 @@ public class CrudServiceImpl implements CrudService {
             e1.printStackTrace();
         }
     }*/
-   private static ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+   //调用spring配置文件src/main/resources/applicationContext.xml,让spring准备好配置文件中的所有bean
+    private static ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+    //调用需要的bean
     private static StudentMapper studentMapper = ctx.getBean(StudentMapper.class);
 
     //插入一个学员信息并且打印日志
@@ -37,7 +37,9 @@ public class CrudServiceImpl implements CrudService {
        /* SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
-
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+        String date = df.format(new Date());// new Date()为获取当前系统时间，也可使用当前时间戳
+        student.setCreateAt(Long.valueOf(date));
         studentMapper.insertStudent(student);
         return student.getId();
     }

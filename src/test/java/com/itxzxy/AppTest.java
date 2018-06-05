@@ -86,7 +86,7 @@ public class AppTest
        /* SqlSession sqlSession = sqlSessionFactory.openSession();
         //创建UserMapper对象，mybatis自动生成mapper代理对象
         StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);*/
-        Logger logger = Logger.getLogger(App.class);
+        Logger logger = Logger.getLogger(AppTest.class);
         long start_insert = System.currentTimeMillis();
         Student student_insert = new Student(
                 "乖儿子", "3169119846", "JAVA工程师",
